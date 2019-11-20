@@ -27,7 +27,7 @@ class RecipeController extends Controller
     public function create()
     {
         $objrec = new Recipe();
-        return view('backend.create', compact('objrec'));
+        return view('backend.recipes.create', compact('objrec'));
     }
 
     /**
@@ -55,9 +55,9 @@ class RecipeController extends Controller
      * @param \App\recipe $recipe
      * @return \Illuminate\Http\Response
      */
-    public function show(recipe $recipe)
+    public function show(Recipe $r)
     {
-        //
+        return view('backend.recipes.show',compact('r'));
     }
 
     /**
@@ -69,7 +69,7 @@ class RecipeController extends Controller
     public function edit(Request $request, Recipe $p)
     {
         //dd($p);
-        return view('backend.edit', compact('p'));
+        return view('backend.recipes.edit', compact('p'));
     }
 
     /**

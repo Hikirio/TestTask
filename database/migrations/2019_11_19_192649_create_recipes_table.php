@@ -15,9 +15,9 @@ class CreateRecipesTable extends Migration
     public function up()
     {
         Schema::create('recipes', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id')->index();
             $table->string('name_recipe');
-            $table->string('description');
+            $table->text('description');
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));;
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP'));;
         });

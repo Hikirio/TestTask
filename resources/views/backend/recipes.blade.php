@@ -100,15 +100,12 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">Мои рецепты</h1>
-
-
             </div>
             <div class="col-lg-12">
-                <form action="{{url('/dashboard/recipes/create')}}" >
-                    <button  class="btn btn-info">Добавить рецепт</button>
+                <form action="{{url('/dashboard/recipes/create')}}">
+                    <button class="btn btn-info">Добавить рецепт</button>
                 </form>
-            </div>
-            <!-- /.col-lg-12 -->
+            </div><!-- /.col-lg-12 -->
         </div>
         <!-- /.row -->
         <br>
@@ -148,9 +145,9 @@
 
 
                                         <td>
-                                            <form action="{{ url('/dashboard/recipes/'.$r->id.'/edit') }}" method="GET">
+                                            <form action="{{ url('/dashboard/recipes/'.$r->id.'/show') }}" method="GET">
                                                 {{ csrf_field() }}
-                                                {{ method_field('EDIT') }}
+                                                {{ method_field('SHOW') }}
                                                 <button type="submit" id="edit-task-{{ $r->id }}"
                                                         class="btn btn-yellow">
                                                     <i class="fa fa-btn fa-eye"></i>

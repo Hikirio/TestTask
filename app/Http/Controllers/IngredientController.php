@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\ingredient;
+use App\Recipe;
 use Illuminate\Http\Request;
 
 class IngredientController extends Controller
@@ -25,8 +26,10 @@ class IngredientController extends Controller
      */
     public function create()
     {
+        $r = Recipe::all();
+
         $objing = new Ingredient();
-        return view('backend.ingredients.create', compact('objing'));
+        return view('backend.ingredients.create', compact('objing','r'));
     }
 
     /**

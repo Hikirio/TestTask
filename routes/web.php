@@ -31,6 +31,7 @@ Route::delete('dashboard/ingredients/{ing}', 'IngredientController@destroy');
 //===================Рецепты====================================
 
 Route::get('dashboard/recipes', 'RecipeController@index');
+Route::get('dashboard/recipes/{r}/show', 'RecipeController@show');
 //Create
 Route::get('dashboard/recipes/create', 'RecipeController@create');
 Route::put('dashboard/recipes/create', 'RecipeController@store');

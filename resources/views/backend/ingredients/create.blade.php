@@ -34,7 +34,11 @@
                         </form>
                     </div>
                 </div>
-
+{{--            @foreach($r as $q)--}}
+{{--                {{($q->RecipeToIngredient['name_product'])}}--}}
+{{--                {{($q->name_recipe)}}--}}
+{{--                {{dd($q->name_product)}}--}}
+{{--            @endforeach--}}
 
                 <!-- /.col-lg-12 -->
             </div>

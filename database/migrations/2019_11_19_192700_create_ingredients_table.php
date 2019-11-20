@@ -17,7 +17,9 @@ class CreateIngredientsTable extends Migration
         Schema::create('ingredients', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name_product');
-            $table->integer('quantity');
+            $table->integer('quantity')->default(0)->comment('количество грамм');
+            $table->bigInteger('recipe_id')->unsigned();
+            $table->foreign('recipe_id')->references('id')->on('recipes');
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));;
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP'));;
 
