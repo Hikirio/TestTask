@@ -14,7 +14,8 @@ class IngredientController extends Controller
      */
     public function index()
     {
-        //
+        $ingredient = Ingredient::all();
+        return view('backend.ingredients', compact('ingredient'));
     }
 
     /**
@@ -24,24 +25,34 @@ class IngredientController extends Controller
      */
     public function create()
     {
-        //
+        $objing = new Ingredient();
+        return view('backend.ingredients.create', compact('objing'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param \Illuminate\Http\Request $request
+     * @param ingredient $objing
+     * @return void
      */
-    public function store(Request $request)
+    public function store(Request $request, Ingredient $objing)
     {
-        //
+
+        $objing->fill([
+
+            'name_product' => $request->name_product,
+
+        ])->save();
+
+        return redirect('/dashboard/ingredients/');
+
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\ingredient  $ingredient
+     * @param \App\ingredient $ingredient
      * @return \Illuminate\Http\Response
      */
     public function show(ingredient $ingredient)
@@ -52,34 +63,41 @@ class IngredientController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\ingredient  $ingredient
+     * @param ingredient $ing
      * @return \Illuminate\Http\Response
      */
-    public function edit(ingredient $ingredient)
+    public function edit(Ingredient $ing)
     {
-        //
+        return view('backend.ingredients.edit', compact('ing'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\ingredient  $ingredient
+     * @param \Illuminate\Http\Request $request
+     * @param ingredient $ing
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ingredient $ingredient)
+    public function update(Request $request, Ingredient $ing)
     {
-        //
+        $ing->fill([
+
+            'name_product' => $request->name_product,
+
+        ])->save();
+        return redirect('/dashboard/ingredients/');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\ingredient  $ingredient
+     * @param ingredient $ing
      * @return \Illuminate\Http\Response
+     * @throws \Exception
      */
-    public function destroy(ingredient $ingredient)
+    public function destroy(Ingredient $ing)
     {
-        //
+        $ing->delete();
+        return redirect('/dashboard/ingredients/');
     }
 }

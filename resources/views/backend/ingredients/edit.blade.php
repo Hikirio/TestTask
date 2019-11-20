@@ -7,25 +7,19 @@
 
     <!-- Форма новой задачи -->
         <center>
-            <form action="{{ url('/dashboard/recipes/'.$p->id.'/update') }}" method="POST" class="form-horizontal">
+            <form action="{{ url('/dashboard/ingredients/'.$ing->id.'/update') }}" method="POST" class="form-horizontal">
                 <input type="hidden" name="_method" value="PUT">
             {{ csrf_field() }}
             <!-- Имя задачи -->
                 <div class="form-group">
                     <label for="task" class="col-sm-3 control-label">Название</label>
                     <div class="col-sm-6">
-                        <input type="text" name="name_recipe" id="name_recipe" value="{{ $p->name_recipe }}"
+                        <input type="text" name="name_product" id="name_product" value="{{ $ing->name_product }}"
                                class="form-control">
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="task" class="col-sm-3 control-label">Описание</label>
-                    <div class="col-sm-6">
-                        <input type="text" name="description" id="description" value="{{ $p->description }}"
-                               class="form-control">
-                    </div>
-                </div>
-                <hr>
+
+
 
                 <!-- Кнопка добавления задачи -->
                 <div class="form-group">

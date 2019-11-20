@@ -99,12 +99,17 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Мои рецепты</h1>
+                <h1 class="page-header">Мои ингридиенты</h1>
             </div>
-            <!-- /.col-lg-12 -->
+            <div class="col-lg-12">
+                <form action="{{url('/dashboard/ingredients/create')}}">
+                    <button class="btn btn-info">Добавить ингридиент</button>
+                </form>
+            </div>
+
         </div>
         <!-- /.row -->
-
+        <br>
         <div class="row">
             <div class="col-lg-12">
                 <div class="panel panel-default">
@@ -137,8 +142,22 @@
                                         <td>{{$ing->updated_at}}</td>
 
                                         <td>
-                                            <button type="button" class="btn btn-primary">Изменить</button>
-                                            <button type="button" class="btn btn-danger">Удалить</button>
+                                            <form action="{{ url('/dashboard/ingredients/'.$ing->id.'/edit') }}" method="GET">
+                                                {{ csrf_field() }}
+                                                {{ method_field('EDIT') }}
+                                                <button type="submit" id="edit-task-{{ $ing->id }}"
+                                                        class="btn btn-primary">
+                                                    <i class="fa fa-btn fa-edit"></i>
+                                                </button>
+                                            </form>
+                                            <form action="{{ url('/dashboard/ingredients/'.$ing->id) }}" method="POST">
+                                                {{ csrf_field() }}
+                                                {{ method_field('DELETE') }}
+                                                <button type="submit" id="delete-task-{{ $ing->id }}"
+                                                        class="btn btn-danger"><i
+                                                            class="fa fa-btn fa-trash"></i>
+                                                </button>
+                                            </form>
                                         </td>
 
                                     </tr>
