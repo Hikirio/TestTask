@@ -83,7 +83,7 @@
                             страница </a>
                     </li>
                     <li>
-                        <a href="{{url('dashboard/recipes')}}"><i class="fa fa-table fa-fw"></i> Рецепты</a>
+                        <a href="{{url('dashboard/recipes')}}"><i class="fa fa-turkey fa-fw"></i>Мои Рецепты</a>
                     </li>
                     <li>
                         <a href="{{url('dashboard/ingredients')}}"><i class="fa fa-table fa-fw"></i> Ингредиенты</a>
@@ -99,7 +99,7 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Мои рецепты</h1>
+                <h1 class="page-header" style="text-align: center">Книга рецептов</h1>
             </div>
             <!-- /.col-lg-12 -->
         </div>
@@ -108,51 +108,16 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading" style="text-align: center">
                         Все ваши рецепты
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
-                        <div class="table-responsive">
-                            <table class="table table-striped table-bordered table-hover" id="dataTables-example">
-                                <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Рецепт</th>
-                                    <th>Описание</th>
-                                    <th>Действия</th>
-                                </tr>
-                                </thead>
-
-                                <tbody>
-                                {{--@foreach($test as $t)--}}
-
-                                {{--{{dd($t->InfoUsers)}}--}}
-                                <tr class="gradeA">
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    {{--                                        <td>{{$t->InfoUsers['id']}}</td>--}}
-                                    {{--                                        <td>{{$t->InfoUsers['surname']}}</td>--}}
-                                    {{--                                        <td>{{$t->InfoUsers['first_name']}}</td>--}}
-                                    {{--                                        <td>{{$t->InfoUsers['second_name']}}</td>--}}
-                                    {{--                                        <td>{{'@'.$t->name}}</td>--}}
-                                    {{--                                        <td>{{$t->email}}</td>--}}
-
-
-                                    <td>
-                                        <button type="button" class="btn btn-yellow">Обзор</button>
-                                        <button type="button" class="btn btn-primary">Изменить</button>
-                                        <button type="button" class="btn btn-danger">Удалить</button>
-                                    </td>
-
-                                </tr>
-
-                                </tbody>
-
-                                {{--                                @endforeach--}}
-                            </table>
-                        </div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
                     </div>
                     <!-- /.panel-body -->

@@ -15,13 +15,31 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('backend.dashboard');
-});
-Route::get('dashboard/ingredients', function () {
-    return view('backend.ingredients');
-});
-Route::get('dashboard/recipes', function () {
-    return view('backend.recipes');
-});
+Route::get('/dashboard','DashboardController@index');
 
+//===================Игридиенты=================================
+Route::get('dashboard/ingredients', 'IngredientController@index');
+
+Route::get('dashboard/recipes/create', 'RecipeController@create');
+Route::put('dashboard/recipes/create', 'RecipeController@store');
+Route::GET('/dashboard/recipes/{p}/edit', 'RecipeController@edit');
+Route::PUT('/dashboard/recipes/{p}/update', 'RecipeController@update');
+
+//===================Рецепты====================================
+
+Route::get('dashboard/recipes', 'RecipeController@index');
+//Create
+Route::get('dashboard/recipes/create', 'RecipeController@create');
+Route::put('dashboard/recipes/create', 'RecipeController@store');
+//Edit
+Route::GET('/dashboard/recipes/{p}/edit', 'RecipeController@edit');
+Route::PUT('/dashboard/recipes/{p}/update', 'RecipeController@update');
+//Delete
+Route::delete('dashboard/recipes/{r}', 'RecipeController@destroy');
+
+//==============================================================
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
