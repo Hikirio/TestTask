@@ -19,11 +19,14 @@ Route::get('/dashboard','DashboardController@index');
 
 //===================Игридиенты=================================
 Route::get('dashboard/ingredients', 'IngredientController@index');
-
-Route::get('dashboard/recipes/create', 'RecipeController@create');
-Route::put('dashboard/recipes/create', 'RecipeController@store');
-Route::GET('/dashboard/recipes/{p}/edit', 'RecipeController@edit');
-Route::PUT('/dashboard/recipes/{p}/update', 'RecipeController@update');
+//Create
+Route::get('dashboard/ingredients/create', 'IngredientController@create');
+Route::put('dashboard/ingredients/create', 'IngredientController@store');
+//Edit
+Route::GET('/dashboard/ingredients/{ing}/edit', 'IngredientController@edit');
+Route::PUT('/dashboard/ingredients/{ing}/update', 'IngredientController@update');
+//Delete
+Route::delete('dashboard/ingredients/{ing}', 'IngredientController@destroy');
 
 //===================Рецепты====================================
 
