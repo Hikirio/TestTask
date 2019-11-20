@@ -11,22 +11,10 @@
     <!-- Bootstrap core CSS -->
     <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- Material Design Bootstrap -->
-    <link href="{{asset('css/mdb.min.css')}}" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
     <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
-
-    <!-- MetisMenu CSS -->
-    <link href="{{asset('css/plugins/metisMenu/metisMenu.min.css')}}" rel="stylesheet">
-
-    <!-- Timeline CSS -->
-    <link href="{{asset('css/plugins/timeline.css')}}" rel="stylesheet">
-
-    <!-- Custom CSS -->
     <link href="{{asset('css/sb-admin-2.css')}}" rel="stylesheet">
-
-    <!-- Morris Charts CSS -->
-    <link href="{{asset('css/plugins/morris.css')}}" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="{{asset('font-awesome-4.1.0/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
@@ -193,20 +181,9 @@
 </div>
 <!-- /#wrapper -->
 
-<script src="{{asset('js/jquery.js')}}"></script>
 <script src="{{asset('js/sb-admin-2.js')}}"></script>
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
 
-<script src="{{asset('js/plugins/metisMenu/metisMenu.min.js')}}"></script>
-
-<script src="{{asset('js/plugins/morris/raphael.min.js')}}"></script>
-<script src="{{asset('js/plugins/morris/morris.min.js')}}"></script>
-<script src="{{asset('js/plugins/morris/morris-data.js')}}"></script>
-
-
-<script type="text/javascript" src="{{asset('js/popper.min.js')}}"></script>
-
-<script type="text/javascript" src="{{asset('js/mdb.min.js')}}"></script>
 </body>
 
 </html>

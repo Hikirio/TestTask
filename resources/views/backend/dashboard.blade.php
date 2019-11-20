@@ -133,20 +133,12 @@
 </div>
 <!-- /#wrapper -->
 
-<script src="{{asset('js/jquery.js')}}"></script>
 <script src="{{asset('js/sb-admin-2.js')}}"></script>
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
 
-<script src="{{asset('js/plugins/metisMenu/metisMenu.min.js')}}"></script>
-
-<script src="{{asset('js/plugins/morris/raphael.min.js')}}"></script>
-<script src="{{asset('js/plugins/morris/morris.min.js')}}"></script>
-<script src="{{asset('js/plugins/morris/morris-data.js')}}"></script>
 
 
-<script type="text/javascript" src="{{asset('js/popper.min.js')}}"></script>
 
-<script type="text/javascript" src="{{asset('js/mdb.min.js')}}"></script>
 </body>
 
 </html>
